@@ -17,3 +17,14 @@
     padding-top: 70px;
   }
 }
+
+.afaq-layout-bg {
+  background-color: #010635;
+  background-image: url('../images/backgroundafaq+1.png');
+  background-size: 100% auto; /* or `100% auto` if preferred */
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 2000px;
+  width: 100%;
+}
+

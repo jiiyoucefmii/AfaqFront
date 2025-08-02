@@ -1,0 +1,36 @@
+.afaq-plus{
+    width: 100%;
+}
+
+.first-text {
+  margin-bottom: 2rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 9rem 2rem 3rem;
+}
+
+
+.first-text h1{
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: 'baloo2';
+  font-weight: 400;
+}
+.gradient-text{
+  background: linear-gradient(to right, #D800B9, #03FFF7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Quantico';
+  background-clip: text;
+  color: transparent;
+  font-weight: 700; 
+}
+@media (max-width: 768px) {
+  .first-text h1 {
+    font-size: 2.5rem;
+  }
+}
