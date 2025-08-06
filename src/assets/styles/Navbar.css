@@ -177,7 +177,7 @@
 }
 
 .navbar.afaqplus-navbar {
-  background-color: rgba(1, 6, 53, 0.0); /* transparent */
+  background-color: rgba(1, 6, 53, 0.0); 
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   transition: all 0.3s ease;
