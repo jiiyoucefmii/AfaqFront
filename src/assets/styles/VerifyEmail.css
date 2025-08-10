@@ -1,23 +1,17 @@
 .verify-email-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 40%, #ffcc00 40%, #ffd700 100%);
+  /* Updated background to use the SVG image */
+  background: url('../images/backgroundafaq.svg') no-repeat center center/cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Aligns content to the left */
   padding: 2rem 1rem;
   position: relative;
 }
 
+/* The ::before pseudo-element is no longer needed for the background, so it is removed. */
 .verify-email-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(135deg, #ffcc00 0%, #ffd700 50%, #ffeb3b 100%);
-  clip-path: ellipse(80% 100% at 100% 50%);
-  z-index: 1;
+  display: none;
 }
 
 .verify-email-container {
@@ -26,29 +20,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.98);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  /* Removed box styling */
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
   position: relative;
   z-index: 2;
+  margin-left: 5rem; /* Pushes the container to the left with some margin */
 }
 
 .verify-email-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Aligns content inside the form to the left */
 }
 
 .verify-email-header {
-  text-align: center;
+  text-align: left; /* Aligns header text to the left */
   margin-bottom: 2rem;
 }
 
 .logo-container {
   margin-bottom: 2rem;
+  margin-left: 0; /* Ensures the logo is aligned left */
 }
 
 .logo-icon {
@@ -56,30 +53,11 @@
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: flex-start; /* Aligns logo icon to the left */
+  margin: 0; /* Resets margin to align left */
 }
 
-.logo-squares {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 4px;
-  width: 60px;
-  height: 60px;
-}
-
-.logo-square {
-  border-radius: 4px;
-}
-
-.logo-square.black {
-  background-color: #000000;
-}
-
-.logo-square.yellow {
-  background-color: #ffcc00;
-}
+/* No changes needed for .logo-squares */
 
 .verify-email-title {
   font-size: 1.75rem;
@@ -134,7 +112,7 @@
 }
 
 .verify-info {
-  text-align: center;
+  text-align: left; /* Aligns info text to the left */
   margin: -0.5rem 0;
 }
 
@@ -209,7 +187,7 @@
 }
 
 .resend-section {
-  text-align: center;
+  text-align: left; /* Aligns resend text to the left */
   margin-top: 1rem;
 }
 
@@ -243,7 +221,7 @@
   color: #c53030;
   font-size: 0.875rem;
   font-weight: 500;
-  text-align: center;
+  text-align: left; /* Aligns error text to the left */
   margin-top: 0.5rem;
 }
 
@@ -254,7 +232,7 @@
   border-radius: 8px;
   color: #c53030;
   font-size: 0.875rem;
-  text-align: center;
+  text-align: left; /* Aligns error message text to the left */
 }
 
 .success-message {
@@ -264,18 +242,20 @@
   border-radius: 8px;
   color: #2f855a;
   font-size: 0.875rem;
-  text-align: center;
+  text-align: left; /* Aligns success message text to the left */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .verify-email-page {
     padding: 1rem;
+    justify-content: center; /* Centers the content on smaller screens */
   }
 
   .verify-email-container {
     padding: 2rem 1.5rem;
     max-width: 400px;
+    margin-left: 0; /* Removes left margin on smaller screens */
   }
 
   .verify-email-title {
@@ -283,7 +263,7 @@
   }
 
   .verify-email-page::before {
-    width: 70%;
+    display: none;
   }
 }
 
@@ -308,6 +288,6 @@
   }
 
   .verify-email-page::before {
-    width: 80%;
+    display: none;
   }
 }
