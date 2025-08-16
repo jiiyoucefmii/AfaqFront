@@ -33,10 +33,10 @@ const Navbar = () => {
         ${isAfaqPlus && scrolled ? 'blurred' : ''}`}>
       <div className="navbar-container">
         <div className="auth-buttons">
-          <Link to="/register" className={`register-button ${isAfaqPlus ? "afaqplus-register-button" : ""}`}>
+          <Link to="/Login" className={`register-button ${isAfaqPlus ? "afaqplus-register-button" : ""}`}>
             تسجيل الدخول
           </Link>
-          <Link to="/login" className={`login-button ${isAfaqPlus ? "afaqplus-login-button" : ""}`}>
+          <Link to="/Signup" className={`login-button ${isAfaqPlus ? "afaqplus-login-button" : ""}`}>
             إنشاء حساب
           </Link>
         </div>
