@@ -3,27 +3,12 @@ import '../assets/styles/AfaqPlusCourses.css';
 import CoursesAfaqP from '../data/CoursesAfaqP';
 import starOutlined from '../assets/images/Star.svg';
 import starFilled from '../assets/images/Star-colored.svg';
+import Pagination from './Pagination';
 
 const AfaqPlusCourses = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;
     const totalPages = Math.ceil(CoursesAfaqP.length / itemsPerPage);
-
-    const handlePageChange = (page) => {
-        if (page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
-        }
-    };
-
-    const getPagination = () => {
-        if (totalPages <= 5) {
-            return [...Array(totalPages).keys()].map(n => n + 1);
-        }
-
-        if (currentPage <= 3) return [1, 2, 3, '...', totalPages];
-        if (currentPage >= totalPages - 2) return [1, '...', totalPages - 2, totalPages - 1, totalPages];
-        return [1, '...', currentPage, '...', totalPages];
-    };
 
     const indexStart = (currentPage - 1) * itemsPerPage;
     const displayedCourses = CoursesAfaqP.slice(indexStart, indexStart + itemsPerPage);
@@ -39,10 +24,6 @@ const AfaqPlusCourses = () => {
                     <div className='one-card' key={course.id}>
                         <div className="image-wraper">
                             <img src={course.image} alt="course" className="original-img" />
-                            <div className="blur-back"></div>
-                            <div className="course-title">
-                                <p>{course.title}</p>
-                            </div>
                             <button
                                 onClick={() => {
                                     setLikedCourses(prev =>
@@ -60,6 +41,10 @@ const AfaqPlusCourses = () => {
                             </button>
 
                         </div>
+
+                        <div className="course-title">
+                                <p>{course.title}</p>
+                            </div>
 
                         <div className="chapters">
                             <img src="src/assets/images/Table of Content.svg" alt="" />
@@ -79,21 +64,11 @@ const AfaqPlusCourses = () => {
                 ))}
             </div>
 
-            <div className="pagination">
-                <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>{'<'}</button>
-                {getPagination().map((page, index) => (
-                    <button
-                        key={index}
-                        className={page === currentPage ? 'active' : ''}
-                        onClick={() => typeof page === 'number' && handlePageChange(page)}
-                        disabled={page === '...'}
-                    >
-                        {page}
-                    </button>
-                ))}
-                <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>{'>'}</button>
-            </div>
-
+            <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
         </div>
     );
 };

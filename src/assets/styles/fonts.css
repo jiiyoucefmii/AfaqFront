@@ -229,3 +229,34 @@
   font-weight: 700;
   font-style: normal;
 }
+/* Amiri Regular */
+@font-face {
+  font-family: 'Amiri';
+  src: url('../../assets/fonts/Amiri/Amiri-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Amiri Bold */
+@font-face {
+  font-family: 'Amiri';
+  src: url('../../assets/fonts/Amiri/Amiri-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Amiri Italic */
+@font-face {
+  font-family: 'Amiri';
+  src: url('../../assets/fonts/Amiri/Amiri-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Amiri Bold Italic */
+@font-face {
+  font-family: 'Amiri';
+  src: url('../../assets/fonts/Amiri/Amiri-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}

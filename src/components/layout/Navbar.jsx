@@ -77,7 +77,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-          <Link to="/" className="navbar-logo">
+          <Link to={isAfaqPlus ? "/afaq-plus" : "/"} className="navbar-logo">
             <img src={isAfaqPlus ? afaqPlus_logo : logo} alt="logo" className="logo-image" /> 
           </Link>
         

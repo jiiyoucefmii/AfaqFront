@@ -34,7 +34,6 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   padding: 5px 40px 5px 20px;
   border-radius: 10px;
   border: 1px solid #D800B9;
@@ -43,11 +42,12 @@
   text-align: center;
   font-size: 1.4rem;
   font-weight: 300;
+  min-width: 10rem;
   font-family: 'Poppins';
   cursor: pointer;
   text-align: right;
 
-  background: url('../images/arrow-circle-right.svg') no-repeat left 10px center;
+  background: url('../images/arrow-circle-right.svg') no-repeat  10px center;
   background-size: 1.2rem;
   
 }
