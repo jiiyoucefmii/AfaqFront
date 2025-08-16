@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../assets/styles/RangeSlider.css';
 
 function RangeSlider() {
-  const [value, setValue] = useState(50); // default to 50%
+  const [value, setValue] = useState(2500); // default to 50%
 
   const handleChange = (event) => {
     setValue(Number(event.target.value));
@@ -17,7 +17,7 @@ function RangeSlider() {
   return (
     <div className="slider">
       <input
-        className="input"
+        className="input-slider"
         type="range"
         min="0"
         max="10000"
