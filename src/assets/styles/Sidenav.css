@@ -1,0 +1,109 @@
+.sidenav {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-image: url('/src/assets/images/backgroundnav.jpg');
+    background-color: rgba(1, 6, 53, 0.7);
+    /* more visible */
+    background-blend-mode: overlay;
+    /* or multiply */
+    background-size: cover;
+    background-position: center;
+    width: 10.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.content {
+    margin-left: 11rem;
+    /* so content doesn’t overlap sidebar */
+    flex: 1;
+    padding: 1rem;
+}
+
+.logo-afaq {
+    height: 120px;
+    width: 120px;
+    padding-bottom: 0;
+
+}
+
+.hr-logo {
+    width: 80%;
+}
+
+.nav-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.barr {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.barr p {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 43px;
+    letter-spacing: -3%;
+    text-align: center;
+    font-variant-numeric: lining-nums;
+    font-variant-numeric: proportional-nums;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.iconii {
+    size: 25px;
+}
+
+.log-out p {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 43px;
+    letter-spacing: -3%;
+    text-align: center;
+    font-variant-numeric: lining-nums;
+    font-variant-numeric: proportional-nums;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+.log-out{
+    padding-bottom: 2rem;
+}

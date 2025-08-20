@@ -8,6 +8,11 @@ import Signup from "./pages/auth/Signup"
 import ForgotPassword from "./pages/auth/ForgotPassword"
 import ResetPassword from "./pages/auth/ResetPassword"
 import VerifyEmail from "./pages/auth/VerifyEmail"
+import Sidenav from '../components/Profile/Sidenav'
+import Overview from './pages/profile-teacher/Overview'
+import Settings from './pages/profile-teacher/Settings'
+import Quiz from './pages/profile-teacher/Quiz'
+import Profile from './pages/profile-teacher/Profile'
 
 function App() {
   return (
@@ -20,15 +25,20 @@ function App() {
         {/* Add more public routes with layout here */}
       </Route>
 
-      {/* Auth routes without layout */}
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
       <Route path="forgot-password" element={<ForgotPassword />} />
       <Route path="reset-password" element={<ResetPassword />} />
       <Route path="verify-email" element={<VerifyEmail />} />
 
-      {/* Optional: Catch all route (404) */}
-      {/* <Route path="*" element={<NotFound />} /> */}
+
+      <Route path="profile" element={<Sidenav />}>
+        <Route index element={<Profile />} />
+        <Route path="overview" element={<Overview />} />
+        <Route path="quiz" element={<Quiz />} />
+        <Route path="settings" element={<Settings />} />
+        {/* Add more profile sub-routes here */}
+      </Route>
     </Routes>
   )
 }
