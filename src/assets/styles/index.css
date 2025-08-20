@@ -1,4 +1,9 @@
 /* Global styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
@@ -159,3 +164,4 @@ img {
 .px-3 { padding: 0 3rem; }
 .px-4 { padding: 0 4rem; }
 .px-5 { padding: 0 5rem; }
+
