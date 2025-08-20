@@ -15,10 +15,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   
     const location = useLocation();
     const isTeachers = location.pathname === "/teachers";
+    const isprofile = location.pathname.includes("/profile");
 
   return (
     <div className={`pagination 
-        ${isTeachers ? 'pagination-teachers' : ''} `}>
+        ${isTeachers || isprofile ? 'pagination-teachers' : ''} `}>
       <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
         {'<'}
       </button>
