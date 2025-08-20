@@ -9,10 +9,10 @@ import ForgotPassword from "./pages/auth/ForgotPassword"
 import ResetPassword from "./pages/auth/ResetPassword"
 import VerifyEmail from "./pages/auth/VerifyEmail"
 import Sidenav from '../components/Profile/Sidenav'
-import Overview from './pages/profile-teacher/Overview'
-import Settings from './pages/profile-teacher/Settings'
-import Quiz from './pages/profile-teacher/Quiz'
-import Profile from './pages/profile-teacher/Profile'
+import OverviewT from './pages/profile-teacher/OverviewT'
+import SettingsT from './pages/profile-teacher/SettingsT'
+import QuizT from './pages/profile-teacher/QuizT'
+import ProfileT from './pages/profile-teacher/ProfileT'
 
 function App() {
   return (
@@ -32,11 +32,11 @@ function App() {
       <Route path="verify-email" element={<VerifyEmail />} />
 
 
-      <Route path="profile" element={<Sidenav />}>
-        <Route index element={<Profile />} />
-        <Route path="overview" element={<Overview />} />
-        <Route path="quiz" element={<Quiz />} />
-        <Route path="settings" element={<Settings />} />
+      <Route path="profile-teacher" element={<Sidenav />}>
+        <Route index element={<ProfileT />} />
+        <Route path="overview-teacher" element={<OverviewT />} />
+        <Route path="quiz-teacher" element={<QuizT />} />
+        <Route path="settings-teacher" element={<SettingsT />} />
         {/* Add more profile sub-routes here */}
       </Route>
     </Routes>

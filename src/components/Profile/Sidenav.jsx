@@ -36,25 +36,25 @@ const Sidenav = () => {
                     <nav>
                         <ul className='barr'>
                             <li className={`nav-icon ${!isOverview && !isSettings && !isQuiz ? "active" : ""}`}>
-                                <Link to="/profile">
+                                <Link to="/profile-teacher">
                                     <ProfileImg className='iconii' color={!isOverview && !isSettings && !isQuiz ? "#FFC800" : "white"} />
                                     <p style={{ color: !isOverview && !isSettings && !isQuiz ? "#FFC800" : "white" }}>Profile</p>
                                 </Link>
                             </li>
                             <li className={`nav-icon ${isOverview ? "active" : ""}`}>
-                                <Link to="/profile/overview">
+                                <Link to="/profile-teacher/overview-teacher">
                                     <OverviewImg className='iconii' color={isOverview ? "#FFC800" : "white"} />
                                     <p style={{ color: isOverview ? "#FFC800" : "white" }}>Overview & Statistics</p>
                                 </Link>
                             </li>
                             <li className={`nav-icon ${isQuiz ? "active" : ""}`}>
-                                <Link to="/profile/quiz">
+                                <Link to="/profile-teacher/quiz-teacher">
                                     <QuizImg className='iconii' color={isQuiz ? "#FFC800" : "white"} />
                                     <p style={{ color: isQuiz ? "#FFC800" : "white" }}>Quizes</p>
                                 </Link>
                             </li>
                             <li className={`nav-icon ${isSettings ? "active" : ""}`}>
-                                <Link to="/profile/settings">
+                                <Link to="/profile-teacher/settings-teacher">
                                     <SettingsImg className='iconii' color={isSettings ? "#FFC800" : "white"} />
                                     <p style={{ color: isSettings ? "#FFC800" : "white" }}>Settings</p>
                                 </Link>
