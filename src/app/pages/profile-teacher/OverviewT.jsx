@@ -34,12 +34,14 @@ const OverviewT = () => {
         <div className="all-teachers1">
           {displayedTeachers.length > 0 ? (
             displayedTeachers.map((teacher) => (
-              <div className="one-card" key={teacher.id}>
-                <img src={teacher.image} alt="teacher" />
-                <div className="white-bottom">
-                  <p className="teacher-name">{teacher.name}</p>
-                  <p className="module">{teacher.module}</p>
-                  <button className="teacher-info">حول الأستاذ</button>
+          
+              <div className="course-card" key={teacher.id}>
+                <div className="course-image">
+                  <img src={teacher.image} alt="دورة المراجعة النهائية رياضيات" className="course-img" />
+                </div>
+                <div className="course-content">
+                  <h3 className="course-name">دورة المراجعة النهائية رياضيات</h3>
+                  <p className="course-instructor">{teacher.name}</p>
                 </div>
               </div>
             ))
