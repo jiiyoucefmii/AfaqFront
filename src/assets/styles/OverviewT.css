@@ -74,6 +74,7 @@
         max-width: 100%;
     }
 }
+
 .my-courses {
     font-family: 'Poppins';
     font-weight: 800;
@@ -103,7 +104,8 @@
 
 .all-teachers1 {
     display: flex;
-    flex-wrap: wrap; /* ✅ pour que ça passe à la ligne */
+    flex-wrap: wrap;
+    /* ✅ pour que ça passe à la ligne */
     justify-content: center;
     gap: 2rem;
     padding-top: 2rem;
@@ -139,10 +141,23 @@
     }
 
     .all-teachers1 {
-        flex-direction: column; /* ✅ chaque card prend toute la largeur */
+        flex-direction: column;
+        /* ✅ chaque card prend toute la largeur */
         align-items: center;
         gap: 1rem;
     }
+}
+
+.no-courses{
+        font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 22px;
+
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 10rem;
 }
 
 @media (max-width: 480px) {

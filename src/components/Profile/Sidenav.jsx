@@ -6,6 +6,7 @@ import SettingsImg from '../icons/SettingsImg';
 import ProfileImg from '../icons/ProfileImg'
 import OverviewImg from '../icons/OverviewImg';
 import LogOut from '../icons/LogOut'
+import logo from '../../assets/images/LogoW.svg'
 
 const Sidenav = () => {
     const location = useLocation();
@@ -18,7 +19,6 @@ const Sidenav = () => {
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
     }
-
     return (
         <>
             {/* Hamburger button */}
@@ -29,7 +29,8 @@ const Sidenav = () => {
             <div className="sidenav">
                 <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
                     <div className="top">
-                        <img src="src/assets/images/LogoW.svg" alt="" className='logo-afaq' />
+                        <Link to="/"><img src={logo} alt="" className='logo-afaq' /></Link>
+                        
                         <hr className='hr-logo' />
                     </div>
 

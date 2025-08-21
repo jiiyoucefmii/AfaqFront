@@ -13,6 +13,8 @@ import OverviewT from './pages/profile-teacher/OverviewT'
 import SettingsT from './pages/profile-teacher/SettingsT'
 import QuizT from './pages/profile-teacher/QuizT'
 import ProfileT from './pages/profile-teacher/ProfileT'
+import AddQuiz from './pages/profile-teacher/AddQuiz'
+import QuizInfo from './pages/profile-teacher/QuizInfo'
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route index element={<ProfileT />} />
         <Route path="overview-teacher" element={<OverviewT />} />
         <Route path="quiz-teacher" element={<QuizT />} />
+        <Route path="quiz-teacher/add-quiz" element={<AddQuiz />} />
+        <Route path="quiz-teacher/quiz-info" element={<QuizInfo/>}/>
         <Route path="settings-teacher" element={<SettingsT />} />
         {/* Add more profile sub-routes here */}
       </Route>
