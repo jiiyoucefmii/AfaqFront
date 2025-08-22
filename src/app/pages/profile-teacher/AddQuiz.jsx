@@ -7,6 +7,7 @@ const AddQuiz = () => {
     const [questions, setQuestions] = useState([
         { question: "", options: ["", "", "", ""], correct: null }
     ]);
+    
 
     const handleAddQuestion = () => {
         setQuestions([

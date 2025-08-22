@@ -12,6 +12,7 @@ const OverviewT = () => {
   const indexStart = (currentPage - 1) * itemsPerPage;
   const displayedTeachers = Teachers.slice(indexStart, indexStart + itemsPerPage);
 
+  
   return (
     <div className='overviewt'>
       <p className='big-overview'>Overview</p>

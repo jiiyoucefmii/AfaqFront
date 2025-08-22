@@ -16,7 +16,8 @@ const QuizT = ()  => {
   const indexStart = (currentPage - 1) * itemsPerPage;
   const displayedQuizzes = Array.from({ length: itemsPerPage }, (_, i) => indexStart + i + 1)
     .filter((id) => id <= totalItems);
-
+ 
+    
   return (
     <div className='quizt'>
       <div className="top1">
